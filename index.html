@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>RUBAN ENCODES</title>
+  <link rel="icon" href="assets/title.ico">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/title.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+  <section class="header">
+    <div class="text-box" style="text-align: center;">
+      <h1>LOG INTO YOUR ACCOUNT</h1>
+      <div class="formbg">
+        <img src="assets/login.png" alt="">
+
+
+        <script>
+          function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+              alert("Name must be filled out");
+              return false;
+            }
+          }
+        </script>
+
+
+
+        <form class="formhed" action="login.html" onsubmit="return validateForm()" method="post">
+          <span class="span1" style="border: none;">
+            <h6 class="reglog">Login </h6>
+          </span>
+          <span class="span2">
+            <h6 class="reglog">Register</h6>
+          </span><br><br>
+          <span class="span1">
+            <label for="fname">Username : </label>
+            <input type="email" name="fname" placeholder="Email/Username" required>
+          </span>
+          <span class="span2">
+            <div class="divi1">
+              <label for="fname">User Name:</label>
+              <input type="text" name="fname" id="" placeholder="Email/Username"
+                onkeydown="return/[A-Za-z0-9]/i.test(event.key)">
+            </div>
+          </span><br><br>
+          <span class="span1">
+            <label for="fname">Pass word : </label>
+            <input type="password" name="fname" placeholder="Your Password" required minlength="8">
+          </span>
+          <span class="span2">
+            <div class="divi1">
+              <label for="fname">Name:</label>
+              <input type="text" name="fname" id="" placeholder="Your Name"
+                onkeydown="return/[A-Za-z]/i.test(event.key)">
+            </div>
+          </span><br><br>
+          <span class="span2">
+            <div class="divi1">
+              <label for="fname">Mail-id :</label>
+              <input type="email" name="fname" id="" placeholder="Your Mail-id" required >
+            </div>
+          </span><br><br>
+          <span class="span2">
+            <div class="divi1">
+              <label for="fname">Date of Birth:</label>
+              <input type="date" name="fname" required>
+            </div>
+          </span><br><br>
+          <span class="span2">
+            <div class="divi1">
+              <label for="fname">Password:</label>
+              <input type="password" name="fname" placeholder="Your Password" required minlength="8"> 
+            </div>
+          </span><br><br>
+
+
+          <input type="submit">
+
+        </form>
+      </div>
+    </div>
+    <nav>
+      <!-- navigation -->
+      <a href="index.html"><img src="assets/title.ico"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-xmark" onclick="hidemenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars " onclick="showmenu()"></i>
+    </nav>
+    <!--------JAVASCRIPT FOR TOGGLE MENU------->
+    <script>
+
+      var navLinks = document.getElementById("navLinks");
+
+      function hidemenu() {
+        navLinks.style.right = "-200px";
+      }
+      function showmenu() {
+        navLinks.style.right = "0";
+      }
+
+    </script>
+  </section>
+</body>
+
+</html>
